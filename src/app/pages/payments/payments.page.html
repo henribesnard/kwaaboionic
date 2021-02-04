@@ -1,0 +1,64 @@
+<app-sidebar></app-sidebar>
+<ion-content class="mainbackground">
+<div class="header">
+<div class="container">
+<div class="row">
+<div class="col-8"><div class="title"><a (click)="dashboardPage()" class="back-btn"><i class="fas fa-angle-left" ></i></a> Payements</div>
+</div>
+<div class="col-4 text-right"><a class="pulse-animation notification-btn" (click)="notificationsPage()"><i class="far fa-bell"></i></a> <div class="profile-pic" (click)="profilePage()"><img src="../../../assets/images/user-profile.jpg" class="width-100"/></div></div>
+</div>
+</div>
+</div>
+<div class="body">
+<div class="container">
+<div class="scan-btn" (click)="scanCode()">
+<div class="icon"><img src="../../../assets/images/qrcode.png" class="w-100"/>
+</div>
+</div>
+<div class="or-text">OU</div>
+<div class="paymentoptions">
+<ul>
+<li><a (click)="transfertPage()"><img src="../../../assets/images/recharge.svg" class="w-100"/></a></li>
+<li><a (click)="withdrawAsset()"><img src="../../../assets/images/transfer.svg" class="w-100"/></a></li>
+<li><a (click)="depositAsset()"><img src="../../../assets/images/exchange.svg" class="w-100"/></a></li>
+</ul>
+</div>
+</div>
+<div class="head-title"><div class="container">Dernières Transactions</div></div>
+<div class="transactionlist">
+<div class="container">
+<div class="transactions-box">
+<div class="left"><div class="icon bg-danger"><img src="../../../assets/images/mobile.svg" class="w-100"/></div></div>
+<div class="middle">
+<div class="title">Mobile money</div>
+<div class="time">il y a 2 min</div>
+</div>
+<div class="right">
+<div class="price text-danger">-$20</div>
+</div>
+</div>
+<div class="transactions-box">
+<div class="left"><div class="icon bg-success"><img src="../../../assets/images/card.svg" class="w-100 card-icon"/></div></div>
+<div class="middle">
+<div class="title">Offre de bienvenue</div>
+<div class="time">il y a 50 min</div>
+</div>
+<div class="right">
+<div class="price text-success">+$55</div>
+</div>
+</div>
+<div class="transactions-box">
+<div class="left"><div class="icon bg-danger"><img src="../../../assets/images/mobile.svg" class="w-100"/></div></div>
+<div class="middle">
+<div class="title">Mobile money</div>
+<div class="time">il y a jour</div>
+</div>
+<div class="right">
+<div class="price text-danger">-$100</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</ion-content>
+<app-footer></app-footer>

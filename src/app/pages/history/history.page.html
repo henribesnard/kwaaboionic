@@ -1,0 +1,77 @@
+<app-sidebar></app-sidebar>
+<ion-content class="mainbackground">
+<div class="header">
+<div class="container">
+<div class="row">
+<div class="col-8"><div class="title"><a (click)="dashboardPage()" class="back-btn"><i class="fas fa-angle-left" ></i></a> Historique</div>
+</div>
+<div class="col-4 text-right"><a class="pulse-animation notification-btn" (click)="notificationsPage()"><i class="far fa-bell"></i></a> <div class="profile-pic" (click)="profilePage()"><img src="../../../assets/images/user-profile.jpg" class="width-100"/></div></div>
+</div>
+</div>
+</div>
+<div class="search-box">
+<div class="container position-relative">
+<form>
+<input type="search" placeholder="Search here" id="search"/>
+<button type="submit"><i class="fa fa-search"></i></button>
+</form>
+</div>
+</div>
+<div class="head-title">
+<div class="container">
+Dépenses mensuelles
+<div class="float-right">
+<div class="round-box bg-success text-white">
+$23,345.12
+</div>
+</div>
+</div>
+</div>
+<div class="chart-box">
+<canvas #lineCanvas></canvas>
+</div>
+<div class="body">
+<div class="head-title"><div class="container">Ajourd'hui</div></div>
+<div class="transactionlist">
+<div class="container">
+<div class="transactions-box">
+<div class="left"><div class="icon bg-danger"><img src="../../../assets/images/mobile.svg" class="w-100"/></div></div>
+<div class="middle">
+<div class="title">Mobile recharge</div>
+<div class="time">2 min ago</div>
+</div>
+<div class="right">
+<div class="price text-danger">-$20</div>
+</div>
+</div>
+<div class="transactions-box">
+<div class="left"><div class="icon bg-success"><img src="../../../assets/images/card.svg" class="w-100 card-icon"/></div></div>
+<div class="middle">
+<div class="title">Money back offer</div>
+<div class="time">50 min ago</div>
+</div>
+<div class="right">
+<div class="price text-success">+$55</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="head-title"><div class="container">23 March 2020</div></div>
+<div class="transactionlist">
+<div class="container">
+<div class="transactions-box">
+<div class="left"><div class="icon bg-danger"><img src="../../../assets/images/mobile.svg" class="w-100"/></div></div>
+<div class="middle">
+<div class="title">Mobile recharge</div>
+<div class="time">1 day ago</div>
+</div>
+<div class="right">
+<div class="price text-danger">-$100</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</ion-content>
+<app-footer></app-footer>

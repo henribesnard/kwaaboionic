@@ -1,0 +1,42 @@
+<aside class="main-menu-box bg-primary">
+<div class="trangle-bg"></div>
+<div class="header">
+<a class="close-btn"><i class="fas fa-times"></i></a>
+</div>
+<div class="menu">
+<ul class="nav flex-column flex-nowrap main-menu overflow-hidden">
+                <li class="nav-item">
+                    <a class="nav-link submenu"  (click)="dashboardPage()" [ngClass]="url1=='/dashboard' ? 'active ' : ''"> <span>Accueil</span></a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" (click)="paymentsPage()" [ngClass]="url1=='/payments' ? 'active ' : ''"> <span>Payements</span></a>
+                    
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" (click)="historyPage()" [ngClass]="url1=='/history' ? 'active' : ''"><span>Historique</span></a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" (click)="profilePage()" [ngClass]="url1=='/profile' ? 'active ' : ''"><span>Profile</span></a>
+                </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" (click)="settingsPage()" [ngClass]="url1=='/settings' ? 'active' : ''"><span>Paramètres</span></a>
+                </li>
+              
+
+            </ul>
+</div>
+
+<div class="menu-footer">
+<div class="profile box">
+<div class="profile-pic" (click)="profilePage()">
+<img src="../../../assets/images/user-profile.jpg" class="w-100" />
+</div>
+<div class="profile-info">
+<div class="name" (click)="profilePage()">{{currentUser.prenom}} {{currentUser.nom}}</div>
+<div class="location">Paris, France</div>
+</div>
+<div class="signout-btn"><a (click)="logout()"><i class="fas fa-sign-out-alt"></i></a></div>
+</div>
+</div>
+</aside>

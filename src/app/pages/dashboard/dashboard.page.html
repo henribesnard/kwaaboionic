@@ -1,0 +1,63 @@
+<app-sidebar></app-sidebar>
+<ion-content class="mainbackground">
+<div class="header">
+<div class="container">
+<div class="row">
+<div class="col-8"><div class="title"><span class="small-logo"><img src="../../../assets/images/logoicon.svg" class="w-100"/></span> <span class="name">Tableau de bord</span></div>
+</div>
+<div class="col-4 text-right"><a class="pulse-animation notification-btn" (click)="notificationsPage()"><i class="far fa-bell"></i></a> <div class="profile-pic" (click)="profilePage()"><img src="../../../assets/images/user-profile.jpg" class="width-100"/></div></div>
+</div>
+</div>
+</div>
+<div class="body">
+<div class="blue-card">
+<div class="container">
+<div class="card bg-primary">
+<div class="card-body">
+<div class="accountbalance">${{balance}} <div class="float-right"><div class="visa-icon"><img src="../../../assets/images/visa-card-icon.svg" class="w-100"/></div></div></div>
+<div class="balanceinfo">
+<div class="name">{{currentUser.prenom}} {{currentUser.nom}}</div>
+<div class="cardno">{{currentUser.compteId}}</div>
+<div class="expiredate">13/20</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="head-title">
+<div class="container">
+Monthly Expenses
+</div>
+</div>
+<div class="chart-box">
+<canvas #lineCanvas></canvas>
+</div>
+<div class="head-title"><div class="container">Recent Transactions</div></div>
+<div class="transactionlist" *ngFor ="let item of payements">
+<div class="container">
+<div *ngIf="item.destinateur !== currentUserId" class="transactions-box">
+<div class="left"><div class="icon bg-success"><img src="../../../assets/images/card.svg" class="w-100 card-icon"/></div></div>
+<div class="middle">
+<div class="title">{{item.id}}</div>
+<div class="time">{{item.date}}</div>
+</div>
+<div class="right">
+<div class="price text-success">+{{item.montant}}</div>
+</div>
+</div>
+<div  *ngIf="item.destinateur == currentUserId" class="transactions-box">
+<div class="left"><div class="icon bg-danger"><img src="../../../assets/images/mobile.svg" class="w-100"/></div></div>
+<div class="middle">
+<div class="title">{{item.id}}</div>
+<div class="time">{{item.date}}</div>
+</div>
+<div class="right">
+<div class="price text-danger">-{{item.montant}}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</ion-content>
+<app-footer></app-footer>

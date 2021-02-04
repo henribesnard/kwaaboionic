@@ -1,0 +1,116 @@
+
+.form-box
+{
+  width:300px;
+  margin:auto;
+  height:450px;
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  text-align:center;
+}
+.form-box .logo
+{
+  width:60px;
+  margin:auto;
+}
+
+.title
+{
+vertical-align: top;
+color:#231F20;
+font-size:16px;
+font-weight:600;
+position:relative;
+text-align:center;
+margin-top:15px;
+margin-bottom:20px;
+}
+
+.social 
+{
+margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+padding: 0px;
+list-style: none;
+text-align: center;
+margin-top: 15px;
+margin-bottom: 15px;
+}
+ul.social li {
+    display: inline-block;
+    margin-right: 10px;
+}
+ul.social li a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	border: 1px solid #CCC;
+	line-height: 40px;
+	border-radius: 5px;
+	font-size: 14px;
+	cursor: pointer;
+}
+ul.social li:first-child a {
+    background: #4267B2;
+    border: 0px;
+    color: #FFF;
+}
+ul.social li:nth-child(2) a {
+    background: #00ACAA;
+    border: 0px;
+    color: #FFF;
+}
+.form-box ul.social li:last-child a {
+    background: #0E76A8;
+    border: 0px;
+    color: #FFF;
+}
+.form-box ul.social li a:hover {
+    opacity: 0.8;
+}
+.form-box .or {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #231F20;
+}
+.form-box .forgot a {
+    text-align: center;
+    font-size: 14px;
+    color: #231F20;
+    opacity: 0.8;
+    margin-top: 10px;
+    display: block;
+	text-decoration:none;
+}
+.form-box .forgot a:hover {
+    color: #EB001B;
+}
+.footer-link
+{
+   font-size:14px;
+   font-weight:400;
+   color:#231F20;
+   text-align:center;
+   position:fixed;
+   bottom:20px;
+   left:0px;
+   right:0px;
+}
+
+.footer-link a
+{
+  color:#be2623;
+  cursor:pointer;
+  text-decoration:none;
+}
+.footer-link a:hover
+{
+   color:#f79e1b;
+}

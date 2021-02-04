@@ -1,0 +1,58 @@
+<app-sidebar></app-sidebar>
+<ion-content  class="mainbackground">
+<div class="container">
+<div class="header">
+<div class="row">
+<div class="col-8"><div class="title"><a (click)="payementsPage()" class="back-btn"><i class="fas fa-angle-left" ></i></a> Retour</div>
+</div>
+
+</div>
+
+</div>
+<div class="body">
+<div class="form-page-box">
+<form role="form" name="form"(ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+<div class="form-group">
+<input 
+type="text" 
+name="destinationCompteId"
+class="form-control"
+placeholder="Numéro de compte du bénéficiaire" 
+[(ngModel)]="form.destinationCompteId"
+required
+#destinationCompteId="ngModel"/>
+</div>
+<div class="alert alert-danger" role="alert" *ngIf="destinationCompteId.errors && f.submitted">
+    Vous devez renseignez un numéro de compte </div>
+<div class="form-group">
+<input 
+type="text"
+name="amount"
+class="form-control"
+placeholder="Montant à envoyer" 
+[(ngModel)]="form.amount"
+required
+#amount="ngModel"/>
+</div>
+<div class="alert alert-danger" role="alert" *ngIf="amount.errors && f.submitted">
+<div *ngIf="amount.errors.required">vous devez saisir un montant</div>
+</div>
+<div class="form-group">
+    <input 
+    type="text"
+    name="commentaire"
+    class="form-control"
+    placeholder="Laisser un comentaire" 
+    [(ngModel)]="form.commentaire"
+    required
+    #commentaire="ngModel"/>
+    </div>
+<div class="text-center mt-4">
+<button type="submit" class="theme btn btn-primary">Envoyez</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</ion-content>
+<app-footer></app-footer>

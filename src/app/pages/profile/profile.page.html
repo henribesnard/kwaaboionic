@@ -1,0 +1,45 @@
+<app-sidebar></app-sidebar>
+<ion-content  class="mainbackground">
+<div class="container">
+<div class="header">
+<div class="row">
+<div class="col-8"><div class="title"><a (click)="dashboardPage()" class="back-btn"><i class="fas fa-angle-left" ></i></a> Profile</div>
+</div>
+<div class="col-4 text-right"><a class="pulse-animation notification-btn" (click)="notificationsPage()"><i class="far fa-bell"></i></a> <a class="edit-btn"><i class="fas fa-edit"></i></a></div>
+</div>
+</div>
+<div class="body">
+<div class="profile-box">
+<div class="top">
+<div class="pic"><img src="../../../assets/images/user-profile.jpg" class="w-100"/></div>
+<div class="name">{{currentUser.prenom}} {{currentUser.nom}}</div>
+<div class="location">paris, France </div>
+</div>
+<div class="bottom">
+<div class="row">
+<div class="col-6">
+<div class="label">Income</div>
+<div class="value text-success">$2,345</div>
+</div>
+<div class="col-6">
+<div class="label">Expenses</div>
+<div class="value text-danger">$1,234</div>
+</div>
+</div>
+</div>
+</div>
+<div class="head">Personal Informations</div>
+<div class="card">
+<div class="card-body">
+<div class="label">Addresse</div>
+<div class="value">200 cooper square, paris, FRANCE</div>
+<div class="label">Email</div>
+<div class="value">{{currentUser.email}}</div>
+<div class="label">Phone</div>
+<div class="value">+1 999 999 9999</div>
+</div>
+</div>
+</div>
+</div>
+</ion-content>
+<app-footer></app-footer>

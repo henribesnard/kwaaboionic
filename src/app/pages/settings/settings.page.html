@@ -1,0 +1,52 @@
+<app-sidebar></app-sidebar>
+<ion-content  class="mainbackground">
+<div class="container">
+<div class="header">
+<div class="row">
+<div class="col-8"><div class="title"><a (click)="dashboardPage()" class="back-btn"><i class="fas fa-angle-left" ></i></a> Paramètres</div>
+</div>
+<div class="col-4 text-right"><a class="pulse-animation notification-btn" (click)="notificationsPage()"><i class="far fa-bell"></i></a> <div class="profile-pic" (click)="profilePage()"><img src="../../../assets/images/user-profile.jpg" class="width-100"/></div></div>
+</div>
+</div>
+<div class="body">
+<div class="settings">
+<div class="box">
+<div class="float-left"><span class="label">Langue</span></div>
+<div class="float-right"><span class="value"><span class="text-success">EN</span> <i class="fas fa-angle-right"></i></span></div>
+</div>
+<div class="box" (click)="changepasswordPage()">
+<div class="float-left"><span class="label">Modifier le mot de passe</span></div>
+<div class="float-right"><span class="value" (click)="changepasswordPage()"><i class="fas fa-angle-right"></i></span></div>
+</div>
+<div class="box" (click)="faqsPage()">
+<div class="float-left"><span class="label">FAQs</span></div>
+<div class="float-right"><span class="value" (click)="faqsPage()"><i class="fas fa-angle-right"></i></span></div>
+</div>
+<div class="box">
+<div class="float-left"><span class="label">Mode nuit</span></div>
+<div class="float-right"><label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label></div>
+</div>
+<div class="box">
+<div class="float-left"><span class="label">Connexion par empreinte digitale</span></div>
+<div class="float-right"><label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label></div>
+</div>
+<div class="box" (click)="feedbackPage()">
+<div class="float-left"><span class="label">Donner votre avis</span></div>
+<div class="float-right"><span class="value" (click)="feedbackPage()"><i class="fas fa-angle-right"></i></span></div>
+</div>
+</div>
+<div class="help-box">
+<div class="icon"><img src="../../../assets/images/help.svg" class="w-100"/></div>
+<div class="name">Aide & Supports</div>
+<a class="theme btn btn-primary" (click)="logout()">Déconnexion</a>
+</div>
+</div>
+</div>
+</ion-content>
+<app-footer></app-footer>

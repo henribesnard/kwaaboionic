@@ -1,0 +1,8 @@
+@media(min-width:320px) and (max-width:575px)
+{
+	.newsdetails.content
+	{
+		padding-left:30px;
+		padding-right:30px;
+	}
+}

@@ -1,0 +1,75 @@
+<ion-content class="mainbackground">
+<div class="form-box">
+
+ 
+ <div class="logo"><img src="../../../assets/images/logoicon.svg" class="w-100"></div>
+ <div class="title">Remplir les champs pour vous enregistrer</div>
+ 
+ <form role="form" name="form"(ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+   <div class="form-group">
+      <input 
+      type="text"
+      class="form-control"
+      placeholder="Nom"
+      name="nom"
+      [(ngModel)]="form.nom"
+      required
+      #nom="ngModel">
+    </div>
+    <div class="alert-danger" *ngIf="nom.errors && f.submitted">
+      <div *ngIf="nom.errors.required">Le nom est obligatoire</div>
+    </div>
+    <div class="form-group">
+      <input 
+      type="text"
+      class="form-control"
+      placeholder="Prénom"
+      name="prenom"
+      [(ngModel)]="form.prenom"
+      required
+      #prenom="ngModel">
+    </div>
+    <div class="alert-danger" *ngIf="prenom.errors && f.submitted">
+      <div *ngIf="prenom.errors.required">Le prénom est obligatoire</div>
+    </div>
+    <div class="form-group">
+      <input 
+      type="email"
+      class="form-control"
+      placeholder="Email"
+      name="email"
+      [(ngModel)]="form.email"
+      required
+      #email="ngModel">
+    </div>
+    <div class="alert-danger" *ngIf="email.errors && f.submitted">
+      <div *ngIf="email.errors.required">Une adresse mail est requise</div>
+      <div *ngIf="email.errors.email">
+        l'adresse email n'est pas valide
+      </div>
+    </div>
+    <div class="form-group">
+      <input 
+      type="password"
+      placeholder="Mot de passe"
+      class="form-control"
+      name="mot_de_passe"
+      [(ngModel)]="form.mot_de_passe"
+      required
+      minlength="6"
+      #mot_de_passe="ngModel">
+    </div>
+    <div class="alert-danger" *ngIf="mot_de_passe.errors && f.submitted">
+      <div *ngIf="mot_de_passe.errors.required">Le mot de passe est obligatoire</div>
+      <div *ngIf="mot_de_passe.errors.minlength">
+        Le mot de passe doit être de 6 caractères minimum
+      </div>
+    </div>
+      <button type="submit" class="theme btn btn-primary">S'enregistrer</button>
+      <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+        Erreur: <br />{{ errorMessage }}
+      </div>
+ </form>
+ </div>
+<div class="footer-link"> Vous avez un compte ? <a (click)="loginPage()">Se connecter</a></div>
+</ion-content>

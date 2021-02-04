@@ -1,0 +1,41 @@
+<ion-content class="mainbackground">
+<div class="form-box">
+
+ 
+ <div class="logo"><img src="../../../assets/images/logoicon.svg" class="w-100"></div>
+ <div class="title">Renseignez vos identifiants</div>
+ 
+ <form role="form" name="form"(ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+   <div class="form-group">
+      <input 
+      type="text" 
+      name="username"
+      class="form-control"
+      placeholder="Email" 
+      [(ngModel)]="form.username"
+      required
+      #username="ngModel">
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="username.errors && f.submitted">
+      L'email est requis </div>
+
+    <div class="form-group">
+      <input 
+      type="password"
+      name="mot_de_passe"
+      class="form-control"
+      placeholder="Mot de passe" 
+      [(ngModel)]="form.password"
+      required
+      #password="ngModel">
+    </div>
+    <div  class="alert alert-danger" role="alert" *ngIf="password.errors && f.submitted">un mot de passe est obligatoire</div>
+    
+      <button type="submit" class="theme btn btn-primary">Se connecter</button>
+      <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed">
+  Login failed: {{ errorMessage }} </div>
+      <div class="forgot"> <a (click)="forgotpasswordPage()">Mot de passe oublié?</a></div>
+ </form>
+ </div>
+<div class="footer-link"> Vous n'avez pas de compte? <a (click)="registerPage()">S'enregistrer</a></div>
+</ion-content>

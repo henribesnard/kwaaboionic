@@ -1,0 +1,27 @@
+<app-sidebar></app-sidebar>
+<ion-content  class="mainbackground">
+<div class="container">
+<div class="header">
+<div class="row">
+<div class="col-8"><div class="title"><a (click)="settingsPage()" class="back-btn"><i class="fas fa-angle-left" ></i></a> Feedback</div>
+</div>
+<div class="col-4 text-right"><a class="pulse-animation notification-btn" (click)="notificationsPage()"><i class="far fa-bell"></i></a> <div class="profile-pic" (click)="profilePage()"><img src="../../../assets/images/user-profile.jpg" class="width-100"/></div></div>
+</div>
+</div>
+<div class="body">
+<div class="feedback">
+<div class="title">Rate This App</div>
+<p>We waiting for your valuable feedback.Please rate our app</p>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+</div>
+</div>
+</div>
+</div>
+</ion-content>
+<app-footer></app-footer>
+

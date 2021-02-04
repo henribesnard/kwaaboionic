@@ -1,0 +1,123 @@
+.edit-btn
+{
+  color:#231F20;
+  font-size:16px;
+  cursor:pointer;
+  position: relative;
+  top: 3px;
+}
+.edit-btn:hover {
+	color: #F79E1B !important;
+}
+.head
+{
+  font-weight:700;
+  color:#231F20;
+  font-size:16px;
+  margin-top:30px;
+  margin-bottom:15px;
+}
+.profile-box .top
+{
+text-align:center;
+padding-top:20px;
+padding-left:20px;
+padding-right:20px;
+padding-bottom:15px;
+}
+.profile-box .top .pic
+{
+  width:80px;
+  height:80px;
+  margin:auto;
+  border-radius:100%;
+  overflow:hidden;
+}
+.profile-box .top .name
+{
+  font-size:16px;
+  font-weight:700;
+  color:#231F20;
+   margin-top:15px;
+}
+.profile-box .top .location
+{
+  font-size:14px;
+  font-weight:500;
+  color:#231F20;
+  opacity:0.7;
+}
+.profile-box .bottom
+{
+text-align:center;
+background:#ffffff;
+padding-top:10px;
+padding-left:20px;
+padding-right:20px;
+padding-bottom:10px;
+border-radius:10px;
+border: 1px solid #F4F3F3;
+
+}
+.profile-box .bottom .row .col-6:first-child:after
+{
+content: "";
+position: absolute;
+top: -10px;
+background: #111;
+width: 1px;
+height: 62px;
+right: 0px;
+opacity: 0.1;
+}
+.profile-box .bottom .label
+{
+  margin-top:0px;
+  opacity:0.7;
+  color: #231F20;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+.profile-box .bottom .value
+{
+  color:#FFF;
+  font-size:14px;
+ font-weight:700;
+}
+.card
+{
+border-radius: 10px;
+border: 0px;
+overflow: hidden;
+background: none;
+}
+
+.card-body
+{
+  background:#ffffff;
+  border-radius: 10px;
+  padding:30px;
+  border: 1px solid #F4F3F3;
+}
+.card-body div:last-child
+{
+  margin-bottom:0px;
+}
+.card .label
+{
+  font-size:14px;
+  font-weight:500;
+  margin-top:0px;
+  margin-bottom:0px;
+  color:#231F20;
+  opacity:0.7;
+}
+.card .value
+{
+  font-size:14px;
+  font-weight:700;
+  margin-top:0px;
+  margin-bottom:15px;
+  color:#231F20;
+  opacity:1;
+}

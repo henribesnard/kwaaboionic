@@ -1,0 +1,79 @@
+<app-sidebar></app-sidebar>
+<ion-content class="mainbackground">
+<div class="header">
+<div class="container">
+<div class="row">
+<div class="col-8"><div class="title"><a (click)="dashboardPage()" class="back-btn"><i class="fas fa-angle-left" ></i></a> Notifications</div>
+</div>
+<div class="col-4 text-right"><a class="pulse-animation notification-btn"><i class="far fa-bell"></i></a> <div class="profile-pic" (click)="profilePage()"><img src="../../../assets/images/user-profile.jpg" class="width-100"/></div></div>
+</div>
+</div>
+</div>
+<div class="body">
+<div class="container">
+<div class="head-title">Recharge  <a class="float-right viewall-btn">View All</a></div>
+<div class="transactionlist grouped">
+<div class="transactions-box">
+<div class="left"><div class="icon bg-danger"><img src="../../../assets/images/mobile.svg" class="w-100"/></div></div>
+<div class="middle">
+<div class="title">Mobile recharge</div>
+<div class="time">2 min ago</div>
+</div>
+<div class="right">
+<div class="price text-danger">-$20</div>
+</div>
+</div>
+</div>
+<div class="head-title">Transfer  <a class="float-right viewall-btn">View All</a></div>
+<div class="transactionlist grouped">
+<div class="transactions-box">
+<div class="left"><div class="icon bg-danger"><img src="../../../assets/images/transfer.svg" class="w-100"/></div></div>
+<div class="middle">
+<div class="title">Money debit</div>
+<div class="time">3 days ago</div>
+</div>
+<div class="right">
+<div class="price text-danger">-$20</div>
+</div>
+</div>
+</div>
+<div class="head-title">Exchange  <a class="float-right viewall-btn">View All</a></div>
+<div class="transactionlist grouped">
+<div class="transactions-box">
+<div class="left"><div class="icon bg-success"><img src="../../../assets/images/exchange-green.svg" class="w-100"/></div></div>
+<div class="middle">
+<div class="title">CAD TO USD</div>
+<div class="time">5 days ago</div>
+</div>
+<div class="right">
+<div class="price text-success">+$150</div>
+</div>
+</div>
+</div>
+<div class="head-title">Others</div>
+<div class="transactionlist">
+<div class="transactions-box">
+<div class="left"><div class="icon bg-success"><img src="../../../assets/images/card.svg" class="w-100 card-icon"/></div></div>
+<div class="middle">
+<div class="title">Money back </div>
+<div class="time">10 days ago</div>
+</div>
+<div class="right">
+<div class="price text-success">+$55</div>
+</div>
+</div>
+<div class="transactions-box">
+<div class="left"><div class="icon bg-success"><img src="../../../assets/images/card.svg" class="w-100 card-icon"/></div></div>
+<div class="middle">
+<div class="title">Gift card</div>
+<div class="time">15 days ago</div>
+</div>
+<div class="right">
+<div class="price text-success">+$85</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</ion-content>
+<app-footer></app-footer>
