@@ -14,7 +14,9 @@ export class AuthGuardService implements CanActivate {
   ) { }
 
   canActivate(): boolean {
-  if (this.authService.getUser() && !this.authService.isTokenExpired()){
+  if (!this.authService.getUser()){
+    this.router.navigate(['login']);
+  }else{
   return true;
   }
   }

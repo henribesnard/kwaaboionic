@@ -33,7 +33,7 @@ export class RegisterPage implements OnInit {
     const pair = StellarSdk.Keypair.random();
     const stellarid = pair.publicKey();
     const stellarsecret = pair.secret();
-    this.authService.register(nom, prenom, email, mot_de_passe, stellarid, stellarsecret).subscribe(
+    this.authService.register(nom, prenom, email, mot_de_passe, pair.publicKey(), pair.secret()).subscribe(
       async data => {
         this.isSuccessful = true;
         this.isSignUpFailed = false;
@@ -47,7 +47,7 @@ export class RegisterPage implements OnInit {
             );
             const responseJSON = await response.json();
             console.log('Le compte est bien créé sur Stellar:)\n', responseJSON);
-            // CHANGE TRUST
+            // CHANGE TRUST TO KWB
             const keypair = StellarSdk.Keypair.fromSecret(stellarsecret);
             const account = await server.loadAccount(keypair.publicKey());
             const transaction = new StellarSdk.TransactionBuilder(account, {
@@ -63,6 +63,7 @@ export class RegisterPage implements OnInit {
               .build();
             transaction.sign(keypair);
             server.submitTransaction(transaction);
+            console.log('Change trust OK');
           } catch (e) {
             console.error('ERROR!', e);
           }

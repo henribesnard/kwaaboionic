@@ -3,7 +3,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Chart } from 'chart.js';
 import { AuthService } from 'src/app/_services/auth.service';
-import { UserService } from 'src/app/_services/user.service';
 const StellarSdk = require('stellar-sdk');
 const server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
 
@@ -44,14 +43,12 @@ export class DashboardPage implements OnInit {
     server.loadAccount(keypair.publicKey())
       .then(account => {
          this.compte = account.balances;
-         console.log(this.compte);
          this.compte.forEach(element => {
            if (element.asset_code === 'KWB'){
              this.balance = element.balance;
            }
          });
       });
-
   }
   linechart() {
 
@@ -59,7 +56,7 @@ export class DashboardPage implements OnInit {
 
       type: 'line',
       data: {
-        labels: [' ', '1week', '2week', '3week', '4week', '5week', ' '],
+        labels: [' ', '1sem', '2sem', '3sem', '4sem', '5sem', ' '],
         datasets: [{
           borderWidth: 2,
           borderColor: '#28A745',

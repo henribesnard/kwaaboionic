@@ -25,7 +25,12 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      console.log('TokenExpiré: ' + this.authService.isTokenExpired());
+      if (!this.authService.getUser()){
+        this.router.navigate(['login']);
+      }else{
+        this.router.navigate(['walkthrough']);
+      }
+
     });
   }
 }

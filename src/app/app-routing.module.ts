@@ -76,16 +76,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/transfert/transfert.module').then( m => m.TranfertPageModule),
     canActivate: [AuthGuardService]
   },
-  {
-    path: 'deposit',
-    loadChildren: () => import('./pages/deposit/deposit.module').then( m => m.DepositPageModule),
-    canActivate: [AuthGuardService]
-  },
-  {
-    path: 'withdraw',
-    loadChildren: () => import('./pages/withdraw/withdraw.module').then( m => m.WithdrawPageModule),
-    canActivate: [AuthGuardService]
-  },
 
 ];
 

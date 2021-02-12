@@ -3,8 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable} from 'rxjs';
 import jwt_decode from 'jwt-decode';
 import { Router } from '@angular/router';
-
-const AUTH_API = 'http://localhost:8080/api/auth/';
+const AUTH_API = 'https://kwaabo-user-api.herokuapp.com/api/auth/';
+// const AUTH_API = 'http://localhost:8080/api/auth/';
 const TOKEN_KEY = 'auth-token';
 const USER_KEY = 'auth-user';
 
@@ -18,7 +18,7 @@ const httpOptions = {
 export class AuthService {
     decodedToken: { [key: string]: string };
     public currentUser: Observable<any>;
-
+    isTokenExpire = true;
   constructor(private http: HttpClient,
               private router: Router) {}
 // SAUVEGARGE DU TOKEN DU USER
@@ -65,12 +65,12 @@ public getExpiryTime(){
 }
 
 // VERIFIER L'EXPIRATION DU TOKEN
-isTokenExpired(): boolean {
+isTokenExpired() {
   const expiryTime: number =  Number(this.getExpiryTime());
-  if (expiryTime) {
-    return ((1000 * expiryTime) - (new Date()).getTime()) < 5000;
+  if (((1000 * expiryTime) - (new Date()).getTime()) < 5000) {
+    this.isTokenExpire = true;
   } else {
-    return false;
+    this.isTokenExpire = false;
   }
 }
 
@@ -87,10 +87,10 @@ login(username: string, password: string): Observable<any> {
 logout() {
   localStorage.clear();
   this.router.navigate(['login']);
+  this.isTokenExpire = true;
 }
 
 // ENREGISTREMENT USER
-  // tslint:disable-next-line: variable-name
 register(nom: string, prenom: string, email: string, mot_de_passe: string, stellarid: string, stellarsecret: string): Observable<any> {
     return this.http.post(AUTH_API + 'signup', {
       nom,

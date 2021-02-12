@@ -8,21 +8,17 @@ import { Router } from '@angular/router';
 })
 export class ChangepasswordPage implements OnInit {
   constructor(private router: Router) { }
-  dashboardPage()
-  {
-   this.router.navigate(['dashboard'])
+  dashboardPage() {
+    this.router.navigate(['dashboard']);
   }
-   notificationsPage()
-  {
-  this.router.navigate(['notifications'])
+  notificationsPage() {
+    this.router.navigate(['notifications']);
   }
-  settingsPage()
-  {
-	   this.router.navigate(['settings'])
+  settingsPage() {
+    this.router.navigate(['settings']);
   }
-  profilePage()
-  {
-	  this.router.navigate(['profile'])
+  profilePage() {
+    this.router.navigate(['profile']);
   }
   ngOnInit() {
   }

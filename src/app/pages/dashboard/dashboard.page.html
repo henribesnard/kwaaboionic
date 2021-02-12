@@ -14,7 +14,7 @@
 <div class="container">
 <div class="card bg-primary">
 <div class="card-body">
-<div class="accountbalance">${{balance}} <div class="float-right"><div class="visa-icon"><img src="../../../assets/images/visa-card-icon.svg" class="w-100"/></div></div></div>
+<div class="accountbalance">{{balance}}<div class="float-right"><div class="visa-icon"><img src="../../../assets/images/visa-card-icon.svg" class="w-100"/></div></div></div>
 <div class="balanceinfo">
 <div class="name">{{currentUser.prenom}} {{currentUser.nom}}</div>
 <div class="cardno">{{currentUser.compteId}}</div>
@@ -26,13 +26,13 @@
 </div>
 <div class="head-title">
 <div class="container">
-Monthly Expenses
+Dépenses mensuelles
 </div>
 </div>
 <div class="chart-box">
 <canvas #lineCanvas></canvas>
 </div>
-<div class="head-title"><div class="container">Recent Transactions</div></div>
+<div class="head-title"><div class="container">Dernières Transactions</div></div>
 <div class="transactionlist" *ngFor ="let item of payements">
 <div class="container">
 <div *ngIf="item.destinateur !== currentUserId" class="transactions-box">
